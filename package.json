@@ -1,12 +1,16 @@
 {
-  "homepage": "https://venkataramanan21.github.io/receipt-track",
+  "homepage": "https://venkataramanan21.github.io/receipt-track/",
+  "author": "Venkataramanan B",
+  "license": "MIT",
+  "repository": "https://github.com/Venkataramanan21/receipt-track.git",
+  "description": "Receipt Tracking App",
   "name": "receipt-track",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",

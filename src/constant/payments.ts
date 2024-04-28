@@ -193,4 +193,18 @@ export const payments = [
     total: '160',
     paidBy: 'nitin',
   },
+  {
+    priceData: {
+      anubhuti: '333.33',
+      gowtham: '333.33',
+      rana: '333.33',
+      prachi: '333.33',
+      athira: '333.33',
+      amala: '333.33',
+    },
+    title: 'Fuel Charges',
+    description: 'Car Fuel Charges',
+    total: '2000',
+    paidBy: 'rana',
+  },
 ];

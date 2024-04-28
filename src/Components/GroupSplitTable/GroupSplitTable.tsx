@@ -48,7 +48,7 @@ const GroupSplitTable = () => {
             <tr>
               <th scope="col">Title</th>
               <th scope="col">Paid By</th>
-              <th scope="col">Total</th>
+              <th scope="col">Paid Amount</th>
               <th scope="col">Your Remaining</th>
             </tr>
           </thead>
@@ -68,7 +68,7 @@ const GroupSplitTable = () => {
                         ? 'You'
                         : (KEY_USER as any)?.[payment.paidBy] ?? payment.paidBy}
                     </td>
-                    <td>{payment.total}</td>
+                    <td>₹{payment.total}</td>
                     <td>
                       {/* {price <= 0 ? } */}
                       <PriceDisplay price={price} showText={true} />
@@ -79,8 +79,10 @@ const GroupSplitTable = () => {
           </tbody>
           <tfoot>
             <tr>
-              <td colSpan={3}>Total</td>
-              <td>
+              <td colSpan={3} className="fw-bold">
+                Grand Total
+              </td>
+              <td className="fw-bold">
                 <PriceDisplay price={totalAmount} showText={false} />
               </td>
             </tr>
@@ -95,14 +97,12 @@ const PriceDisplay = ({ price, showText }: any) => {
   if (price < 0)
     return (
       <span className="text-danger">
-        {showText && 'You Owe '}
-        {price * -1}
+        {showText && 'You Owe '}₹{price * -1}
       </span>
     );
   return (
     <span className="text-success">
-      {showText && 'Owes you '}
-      {price}
+      {showText && 'Owes you '}₹{price}
     </span>
   );
 };

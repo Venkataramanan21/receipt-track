@@ -8,7 +8,9 @@ function App() {
       {/* <SplitForm /> */}
       <GroupSplitTable />
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Note: Pay the Grand Total to Venkat if the Grand total is in red. If it
+        is in Green ask him for money. No need to ask any Paid By Candidate as
+        he will be the pivot of the transaction.
       </p>
     </>
   );
